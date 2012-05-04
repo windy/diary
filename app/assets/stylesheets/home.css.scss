@@ -1,0 +1,41 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+div {
+  border: 1px solid;
+  color: red;
+}
+
+div.wrapper1 {
+  margin: auto;
+  width: 960px;
+}
+
+div.tree {
+  width: 25%;
+  min-height: 500px;
+  display: inline-block;
+}
+
+div.line {
+  min-height: 500px;
+  width: 5px;
+  border: 2px solid;
+  cursor: we-resize;
+  z-index: 90000;
+  display: inline-block;
+}
+
+div.content {
+  min-width: 60%;
+  min-height: 500px;
+  display: inline-block;
+}
+
+div.debug_window {
+  min-width: 100%;
+  height: 300px;
+  position: absolute;
+  bottom: 0px;
+  clear: both;
+}
