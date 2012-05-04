@@ -15,3 +15,4 @@ gem 'jquery-rails'
 gem "therubyracer"
 
 gem "devise"
+gem 'anjlab-bootstrap-rails', '>= 2.0', :require => 'bootstrap-rails'
