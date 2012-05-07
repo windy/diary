@@ -198,9 +198,9 @@ zh-CN:
     errors:
       <<: *errors
 
-  home: "HHome"
-  browse: "BBrowse"
-  add_note: "Add Note"
-  recent_diaries: "My Recent Diaries"
-  logout: "Logout"
-  user_profile: "User Profile"
+  home: "主页"
+  browse: "我的主页"
+  add_note: "写日志"
+  recent_diaries: "近期日志"
+  logout: "退出"
+  user_profile: "用户资料"
