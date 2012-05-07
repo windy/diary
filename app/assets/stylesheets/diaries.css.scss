@@ -1,3 +1,13 @@
 // Place all the styles related to the diaries controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+div.side {
+  float: left;
+  width: 294px;
+  border-right: 1px solid;
+}
+
+div.content {
+  margin-left: 310px;
+}

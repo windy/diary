@@ -4,5 +4,5 @@ App::Application.routes.draw do
 
   resources :diaries
 
-  root :to=> "home#index"
+  root :to=> "diaries#index"
 end

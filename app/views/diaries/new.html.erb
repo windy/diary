@@ -1,2 +1,7 @@
-<h1>Diaries#new</h1>
-<p>Find me in app/views/diaries/new.html.erb</p>
+<div class="content">
+  <%= simple_form_for(@diary) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :text %>
+    <%= f.submit %>
+  <% end %>
+</div>

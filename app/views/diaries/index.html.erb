@@ -1,1 +1,14 @@
-<h1>Hello</h1>
+<div class="side">
+  <h1>My Recent Diaries</h1>
+  <ul>
+    <% @diaries.each do |diary| %>
+      <li>
+        <%= link_to diary.name, diary_path(diary) %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+<div class="content">
+  hello, it's you!
+</div>
