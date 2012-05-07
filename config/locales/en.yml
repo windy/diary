@@ -2,4 +2,9 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  home: "Home"
+  browse: "Browse"
+  add_note: "Add Note"
+  recent_diaries: "My Recent Diaries"
+  logout: "Logout"
+  user_profile: "User Profile"
