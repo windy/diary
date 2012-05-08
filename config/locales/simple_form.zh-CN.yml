@@ -1,15 +1,15 @@
 zh-CN:
   simple_form:
-    "yes": 'Yes'
-    "no": 'No'
+    "yes": '是'
+    "no": '否'
     required:
-      text: 'required'
+      text: '必须的'
       mark: '*'
       # You can uncomment the line below if you need to overwrite the whole required html.
       # When using html, text and mark won't be used.
       # html: '<abbr title="required">*</abbr>'
     error_notification:
-      default_message: "Please review the problems below:"
+      default_message: "请检查以下问题:"
     # Labels and hints examples
     # labels:
     #   defaults:
