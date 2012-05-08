@@ -47,12 +47,6 @@ div.side>ul>li {
   color: #888;
 }
 
-
-/*not used*/
-div.side>h1:after {
-  content: ".";
-  display: block;
-  height: 0;
-  visibility: hidden;
-  clear: both;
+#diary_text {
+  width: 100%;
 }

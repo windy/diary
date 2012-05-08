@@ -9,3 +9,9 @@ en:
   logout: "Logout"
   user_profile: "User Profile"
   success: "Create diary success"
+  from: " ago"
+  sign_in: "登录"
+  helpers:
+    submit:
+      diary:
+        create: "OK Submit"

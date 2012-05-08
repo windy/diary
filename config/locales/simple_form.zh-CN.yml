@@ -11,16 +11,17 @@ zh-CN:
     error_notification:
       default_message: "请检查以下问题:"
     # Labels and hints examples
-    # labels:
-    #   defaults:
-    #     password: 'Password'
-    #   user:
-    #     new:
-    #       email: 'E-mail to sign in.'
-    #     edit:
-    #       email: 'E-mail.'
-    # hints:
-    #   defaults:
-    #     username: 'User name to sign in.'
-    #     password: 'No special characters, please.'
+    labels:
+      diary:
+        name: '标题'
+        text: '正文'
+      user:
+        email: '输入邮箱'
+        password: "密码"
+        remember_me: "记住我"
+        password_confirmation: "再次输入密码"
+    hints:
+      defaults:
+        username: ''
+        password: ''
 
