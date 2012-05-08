@@ -3,10 +3,10 @@
   <ul>
     <% @diaries.each do |diary| %>
       <li>
-        <ul>
-          <li> <%= link_to diary.name, diary_path(diary) %> </li>
-          <li> <%= truncate(diary.text) %> </li>
-          <li> <%= time_ago_in_words(diary.created_at) %> </li>
+        <ul class="diary">
+          <li class="name"><i class="icon-envelope"></i> <%= link_to diary.name, diary_path(diary) %> </li>
+          <li class="text"> <%= truncate(diary.text) %> </li>
+          <li class="from"> <%= time_ago_in_words(diary.created_at)%><%=t(:from)%> </li>
         </ul>
       </li>
     <% end %>

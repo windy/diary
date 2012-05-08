@@ -32,6 +32,22 @@ div.side>ul>li {
   padding: 5px 5px;
 }
 
+.diary {
+  list-style: none; 
+  margin-left: 5px;
+  clear: both;
+}
+
+.diary li.text{
+  margin-left: 18px;
+}
+
+.diary li.from{
+  text-align: right;
+  color: #888;
+}
+
+
 /*not used*/
 div.side>h1:after {
   content: ".";

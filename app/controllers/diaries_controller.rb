@@ -13,6 +13,8 @@ class DiariesController < ApplicationController
     if current_user.save
       flash[:notice] = t(:success)
       redirect_to :action=>:index
+    else
+      render :action=> :new
     end
   end
 
