@@ -11,3 +11,32 @@ div.side {
 div.content {
   margin-left: 310px;
 }
+
+div.side h1 {
+  margin-left: 0px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid;
+  margin-bottom: 16px;
+  float: left;
+}
+
+div.side>ul {
+  clear: both;
+  list-style: none;
+}
+div.side>ul>li {
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0,0,0, .1);
+  border-radius: 10px;
+  margin: 5px 5px;
+  padding: 5px 5px;
+}
+
+/*not used*/
+div.side>h1:after {
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}

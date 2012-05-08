@@ -9,7 +9,7 @@
 <body>
   <div class="navbar">
   	<div class="navbar-inner">
-      <div class="container">
+      <div class="container" id="navbar">
         <a href="#" class="brand">Diary</a>
         <div class="nav-collapse">
         	<ul class="nav">
@@ -21,7 +21,8 @@
         <% if current_user %>
           <ul class="nav pull-right">
             <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%=current_user.email %></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%=current_user.email %> <b class="caret"></b></a>
+            
               <ul class="dropdown-menu">
                 <li><%= link_to t(:user_profile), edit_user_registration_path,:class=>"first" %></li>
                 <li><%= link_to t(:logout), destroy_user_session_path, :method=>"DELETE", :class=>"last" %></li>
@@ -33,13 +34,15 @@
   	</div>
   </div>
 
-  <% if notice %>
-    <p class="notice"><%= notice %></p>
-  <% end %>
-  <% if alert %>
-    <p class="alert"><%= alert %></p> 
-  <% end %>
-<%= yield %>
+  <div class="container">
+    <% if notice %>
+      <p class="notice"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert"><%= alert %></p> 
+    <% end %>
+  <%= yield %>
+  </div>
 
 </body>
 </html>

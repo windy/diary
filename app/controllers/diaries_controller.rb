@@ -4,14 +4,14 @@ class DiariesController < ApplicationController
   end
 
   def index
-    @diaries = current_user.diaries
+    @diaries = current_user.diaries.order_time
   end
 
   def create
     @diary = Diary.new(params[:diary])
     current_user.diaries << @diary
     if current_user.save
-      flash[:notice] = "success!"
+      flash[:notice] = t(:success)
       redirect_to :action=>:index
     end
   end
