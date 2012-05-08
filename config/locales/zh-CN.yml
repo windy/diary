@@ -210,6 +210,11 @@ zh-CN:
   sign_up: "注册"
   forgot_your_password: "忘记密码？"
   send_reset_password: "发送重置邮件"
+  change_profile: "修改用户资料"
+  blank_password_tip: "留空表示不修改"
+  current_password: "当前密码"
+  need_current_password: "为了保证安全，请提供当前密码"
+  update: "更新"
   helpers:
     submit:
       user:
