@@ -19,6 +19,15 @@ body {
   background: url(bg.png);
 }
 
+a.logo img {
+  width: 29px;
+  margin-top: -10px;
+}
+a.logo em {
+ font-size: 70%; 
+ color: brown;
+}
+
 #navbar {
   width: 940px;
 }

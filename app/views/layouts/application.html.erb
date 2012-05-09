@@ -10,7 +10,9 @@
   <div class="navbar">
   	<div class="navbar-inner">
       <div class="container" id="navbar">
-        <%= link_to "Diary", root_path, :class=>"brand"%>
+        <%= link_to root_path, :class=>"logo brand" do%>
+          <%= image_tag('holiday_diary.png')  %> Diary <em>Beta</em>
+        <% end %>
         <div class="nav-collapse">
         	<ul class="nav">
         		<li> <%= link_to t(:home), root_path %> </li>

@@ -4,7 +4,9 @@
 
 $(document).ready ->
   $('.diary a').click ->
+    $('div.content').html("<pre>加载中...</pre>")
     $.get this.href,(data) ->
+      #$('div.content').html(data)
       $('div.content').html("<pre>" +data + "</pre>")
     false
 
