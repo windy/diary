@@ -1,5 +1,14 @@
 <%= simple_form_for(@diary) do |f| %>
   <%= f.input :name %>
-  <%= f.input :text %>
-  <%= f.submit %>
+  <ul class="nav nav-tabs">
+  	<li class="active">
+  		<a href="#" id="edit">正文</a>
+  	</li>
+  	<li>
+  		<a href="#" id="preview">预览</a>
+  	</li>
+  </ul>
+  <%= f.input :text, :label=>false %>
+  <div id="preview_text"></div>
+  <%= f.submit :class=>"btn btn-primary" %>
 <% end %>

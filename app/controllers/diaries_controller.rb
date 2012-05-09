@@ -29,6 +29,11 @@ class DiariesController < ApplicationController
     render :text=>@diary.text
   end
 
+  def preview
+    text = params[:text]
+    render :text=> BlueCloth.new(text).to_html
+  end
+
   def edit
   end
 end
