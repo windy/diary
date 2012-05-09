@@ -5,5 +5,5 @@
 $(document).ready ->
   $('.diary a').click ->
     $.get this.href,(data) ->
-      $('div.content').html(data)
+      $('div.content').html("<pre>" +data + "</pre>")
     false
