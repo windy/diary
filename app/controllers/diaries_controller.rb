@@ -28,7 +28,7 @@ class DiariesController < ApplicationController
     @diary = current_user.diaries.find(params[:id])
     text = @diary.text
     text = BlueCloth.new(text).to_html unless params[:origin]
-    render :text=>@diary.text
+    render :text=>text
   end
 
   def preview
