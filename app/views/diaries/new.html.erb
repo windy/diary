@@ -7,8 +7,10 @@
   	<li>
   		<a href="#" id="preview">预览</a>
   	</li>
+  <a class="help" data-toggle="modal" title="如何更漂亮写日志？" href="#help"><i class="icon-question-sign"></i></a>
   </ul>
   <%= f.input :text, :label=>false %>
   <div id="preview_text"></div>
   <%= f.submit :class=>"btn btn-primary" %>
 <% end %>
+<%= render "common/help" %>
