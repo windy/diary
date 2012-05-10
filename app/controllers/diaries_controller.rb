@@ -7,6 +7,12 @@ class DiariesController < ApplicationController
     @diaries = current_user.diaries.order_time
   end
 
+  def user_index
+    user = User.find_by_name(params[:user])
+    @diaries = user.diaries.order_time
+    render :index
+  end
+
   def create
     @diary = Diary.new(params[:diary])
     current_user.diaries << @diary
@@ -25,7 +31,8 @@ class DiariesController < ApplicationController
   end
 
   def show
-    @diary = current_user.diaries.find(params[:id])
+    #@diary = current_user.diaries.find(params[:id])
+    @diary = Diary.find(params[:id])
     text = @diary.text
     text = BlueCloth.new(text).to_html unless params[:origin]
     render :text=>text

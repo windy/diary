@@ -16,13 +16,14 @@ zh-CN:
         name: '标题'
         text: '正文'
       user:
+        name: '你的名字'
         email: '输入邮箱'
         password: "密码"
         remember_me: "记住我"
         password_confirmation: "再次输入密码"
         current_password: "当前密码"
     hints:
-      defaults:
-        username: ''
+      user:
+        name: '拥有专属域名'
         password: ''
 

@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
   def index
-    @project = nil
+  end
+
+  def about
   end
 end
