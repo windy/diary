@@ -61,8 +61,17 @@ div.side>ul>li {
   border-radius: 3px;
   margin-bottom: 20px;
 }
+#preview_text>pre {
+  background-color: white;
+  border: none;
+}
 
 a.help {
   margin-top: 20px;
   float: right;
+}
+
+.icon-diary {
+  background-image: url(k.png);
+  background-position: 0 0;
 }

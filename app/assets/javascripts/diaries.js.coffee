@@ -17,7 +17,7 @@ $(document).ready ->
     $(this).parent().addClass('active')
     preview_text.html('加载中...')
     $.post '/diaries/preview', {text: diary_text.val()}, (data)->
-      preview_text.html(data)
+      preview_text.html("<pre>" +data + "</pre>")
       diary_text.hide()
       preview_text.show()
     false

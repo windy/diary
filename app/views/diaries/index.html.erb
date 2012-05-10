@@ -4,7 +4,7 @@
     <% @diaries.each do |diary| %>
       <li>
         <ul class="diary">
-          <li class="name"><i class="icon-envelope"></i> <%= link_to diary.name, diary_path(diary) %> </li>
+          <li class="name"><i class="icon-diary"></i> <%= link_to diary.name, diary_path(diary) %> </li>
           <li class="text"> <%= truncate(diary.text) %> </li>
           <li class="from"> <%= time_ago_in_words(diary.created_at)%><%=t(:from)%> </li>
         </ul>
@@ -14,5 +14,5 @@
 </div>
 
 <div class="content">
-  没有选择日志
+  <pre> <p> 没有选择日志 </p> </pre>
 </div>
