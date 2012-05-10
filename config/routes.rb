@@ -12,5 +12,5 @@ App::Application.routes.draw do
 
   match '/:user'=> 'diaries#user_index'
 
-  root :to=> "diaries#index"
+  root :to=> "home#index"
 end

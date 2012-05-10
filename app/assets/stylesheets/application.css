@@ -12,6 +12,7 @@
  *= require bootstrap
  *= require responsive
  *= require diaries
+ *= require home
  *= require_self
 */
 

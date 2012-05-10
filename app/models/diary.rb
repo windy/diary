@@ -4,4 +4,8 @@ class Diary < ActiveRecord::Base
   validates :name, :presence=> true, :uniqueness=> { :scope=> :user_id }
 
   scope :order_time, order("created_at DESC")
+
+  def markdown_text
+    BlueCloth.new(text).to_html
+  end
 end
