@@ -18,3 +18,4 @@ gem 'anjlab-bootstrap-rails', '>= 2.0', :require => 'bootstrap-rails'
 gem "simple_form"
 gem "thin"
 gem "bluecloth"
+gem "cancan"

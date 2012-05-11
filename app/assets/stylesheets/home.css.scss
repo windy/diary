@@ -31,14 +31,15 @@ div.diaries {
 
 div.diary {
   min-height: 100px;
-  #width: 200px;
   border: 1px solid #D9D8DD;
-  border-radius: 10px;
+  border-radius: 7px;
   margin-top: 16px;
   /*margin-right: 16px;*/
   background-color: rgba(255,255,255,0.8);
   -webkit-column-break-inside: avoid;
-  box-shadow: 10px 10px 5px #888;
+  -moz-column-break-inside: avoid;
+  column-break-inside: avoid;
+  box-shadow: 5px 5px 10px #888;
   cursor: pointer;
 }
 
@@ -48,6 +49,23 @@ div.diary>pre {
   margin-bottom: 0px;
   border-top: 1px solid #EEE;
   background-color: rgba(245,245,245,0.8);
+}
+
+div#preview_modal {
+  height: auto;
+}
+
+div#preview_modal .modal-body p {
+  white-space: pre-wrap;
+}
+
+div#preview_modal .modal-body {
+  height: auto;
+  max-height: 10000px;
+}
+
+div#preview_modal pre {
+  overflow: auto; 
 }
 
 div.diary>div.title {
