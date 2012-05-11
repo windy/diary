@@ -9,5 +9,8 @@ $(document).ready ->
     preview_modal.children('.modal-body').html("加载中...")
     preview_modal.modal('show')
     $.get $(this).attr('href'), (data) ->
-      preview_modal.children('.modal-body').html(data)
+      preview_modal.children('.modal-body').html(data + "<p>(全文完)</p>")
     false
+
+  $('div.diary').click ->
+    $(this).children('.title').find('a').trigger('click')
