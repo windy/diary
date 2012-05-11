@@ -6,7 +6,7 @@
         <%= link_to diary.name, diary_path(diary), :title=> "专属ID： #{diary.id}" %>
       </div>
       <pre>
-      <%= diary.markdown_text.html_safe %>
+      <%= BlueCloth.new(truncate(diary.text,:length=> 200)).to_html.html_safe %>
       </pre>
       <div class="from">
             <%= time_ago_in_words(diary.created_at)%><%=t(:from)%>
@@ -14,3 +14,5 @@
     </div>
   <% end %>
 </div>
+
+<%= render "common/preview" %>

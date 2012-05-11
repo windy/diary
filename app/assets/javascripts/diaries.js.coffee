@@ -3,7 +3,7 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 $(document).ready ->
-  $('.diary a').click ->
+  $('ul.diary a').click ->
     $('div.content').html("<pre>加载中...</pre>")
     $.get this.href,(data) ->
       #$('div.content').html(data)

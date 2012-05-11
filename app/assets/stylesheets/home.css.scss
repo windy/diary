@@ -12,13 +12,21 @@ div.diaries {
   -webkit-column-break-after: avoid;
   -webkit-column-break-inside: avoid;
   -moz-column-count: 5;
-  -moz-column-gap: 20px;
-  -moz-column-rule: 5px solid #333;
+  -moz-column-gap: 3px;
+  -moz-column-rule: none;
   -moz-column-width: 210px;
+  -moz-column-span: all;
+  -moz-column-break-before: avoid;
+  -moz-column-break-after: avoid;
+  -moz-column-break-inside: avoid;
   column-count: 5;
-  column-gap: 10px;
+  column-gap: 3px;
   column-rule: none;
   column-width: 210px;
+  column-span: all;
+  column-break-before: avoid;
+  column-break-after: avoid;
+  column-break-inside: avoid;
 }
 
 div.diary {
