@@ -3,11 +3,11 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 $(document).ready ->
+  diary_show = $('div.diary_show')
   $('ul.diary a').click ->
-    $('div.content').html("<pre>加载中...</pre>")
+    diary_show.html("加载中...")
     $.get this.href,(data) ->
-      #$('div.content').html(data)
-      $('div.content').html("<pre>" +data + "</pre>")
+      diary_show.html(data)
     false
 
   diary_text = $("#diary_text")

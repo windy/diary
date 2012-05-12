@@ -11,7 +11,17 @@ div.side {
 
 div.content {
   margin-left: 320px;
-  min-height: 600px;
+  #min-height: 600px;
+}
+
+div.diary_show {
+  background-color: white;
+  box-shadow: 5px 5px 6px rgba(0,0,0, .2);
+  border-radius: 10px;
+  padding: 10px 10px;
+  white-space: pre-line;
+  position: absolute;
+  width: 620px;
 }
 
 div.side h1 {
