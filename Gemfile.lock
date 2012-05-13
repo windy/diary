@@ -148,6 +148,7 @@ DEPENDENCIES
   anjlab-bootstrap-rails (>= 2.0)
   bluecloth
   cancan
+  capistrano
   coffee-rails (~> 3.2.1)
   devise
   jquery-rails

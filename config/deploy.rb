@@ -1,5 +1,5 @@
 require 'rvm/capistrano'
-#require 'bundler/capistrano'
+require 'bundler/capistrano'
 #default_run_options[:shell] = '/bin/bash'
 default_run_options[:pty] = true
 set :application, "diaryonline"
@@ -73,4 +73,4 @@ after "deploy:setup", "sqlite3:build_configuration"
 
 before "deploy:migrate", "sqlite3:link_configuration_file"
 before "deploy:migrate", "sqlite3:backup_database"
-before "deploy:update", "sqlite3:link_configuration_file"
+after "deploy:update", "sqlite3:link_configuration_file"
