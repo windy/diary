@@ -3,13 +3,17 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 #
 $(document).ready ->
-  $('div.diary a').click ->
+  $('div.diary .title>a').click ->
     preview_modal = $('#preview_modal')
     preview_modal.children('.modal-header').find('h3').html( $(this).text() )
     preview_modal.children('.modal-body').html("加载中...")
     preview_modal.modal('show')
     $.get $(this).attr('href'), (data) ->
       preview_modal.children('.modal-body').html(data + "<p>(全文完)</p>")
+    false
+
+  $('div.diary pre a').click ->
+    window.open( $(this).attr('href'),"_blank" )
     false
 
   $('div.diary').click ->
