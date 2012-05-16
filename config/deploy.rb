@@ -54,7 +54,7 @@ namespace :sqlite3 do
        
   desc "Links the configuration file"
   task :link_configuration_file, :roles => :db do
-    run "ln -nsf #{shared_database_path}/sqlite_config.yml #{release_path}/config/database.yml"
+    run "ln -nsf #{shared_database_path}/sqlite_config.yml #{current_path}/config/database.yml"
   end
            
   desc "Make a shared database folder"
