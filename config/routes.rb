@@ -3,6 +3,8 @@ App::Application.routes.draw do
   devise_for :users
 
   match '/about'=> 'home#about'
+  match '/square'=>'home#index', :as=>'square'
+  match '/autosave'=>'diaries#save'
 
   resources :diaries do
     collection do
@@ -12,5 +14,5 @@ App::Application.routes.draw do
 
   match '/:user'=> 'diaries#user_index'
 
-  root :to=> "home#index"
+  root :to=> "diaries#index"
 end

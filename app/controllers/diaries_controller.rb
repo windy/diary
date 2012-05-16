@@ -1,6 +1,10 @@
 class DiariesController < ApplicationController
   def new
     @diary = Diary.new
+    if current_user.saved
+      @diary.text = current_user.saved
+      flash[:notice] = t(:last_diary_exist_message)
+    end
   end
 
   def index
@@ -17,6 +21,8 @@ class DiariesController < ApplicationController
     @diary = Diary.new(params[:diary])
     current_user.diaries << @diary
     if current_user.save
+      current_user.saved = nil
+      current_user.save
       flash[:notice] = t(:success)
       redirect_to :action=>:index
     else
@@ -44,5 +50,16 @@ class DiariesController < ApplicationController
   end
 
   def edit
+  end
+  
+  def save
+    text = params[:text]
+    current_user.saved = text
+    if current_user.save
+      render :text=>true
+    else
+      logger.warn("save log error: #{ current_user.errors.message.to_s }")
+      render :text=>false
+    end
   end
 end

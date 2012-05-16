@@ -215,6 +215,7 @@ zh-CN:
   current_password: "当前密码"
   need_current_password: "为了保证安全，请提供当前密码"
   update: "更新"
+  last_diary_exist_message: "上次已为你保存了草稿，你可以继续或者删除重写"
   helpers:
     submit:
       user:

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120510033431) do
+ActiveRecord::Schema.define(:version => 20120516153604) do
 
   create_table "diaries", :force => true do |t|
     t.string   "name"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(:version => 20120510033431) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.string   "name"
+    t.text     "saved"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

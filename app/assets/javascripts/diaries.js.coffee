@@ -9,7 +9,6 @@ $(document).ready ->
     $.get this.href,(data) ->
       diary_show.html(data)
     false
-
   diary_text = $("#diary_text")
   preview_text = $("#preview_text")
   $('#preview').click ->
@@ -21,10 +20,15 @@ $(document).ready ->
       diary_text.hide()
       preview_text.show()
     false
-
   $('#edit').click ->
     $('#preview').parent().removeClass('active')
     $(this).parent().addClass('active')
     preview_text.hide()
     diary_text.show()
     false
+  autosave= ()->
+    text = $("#diary_text").val()
+    if text == ""
+      return false
+    $.post '/autosave',{ text: text }, (data) ->
+  setInterval(autosave, 10000)
