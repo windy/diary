@@ -2,6 +2,12 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
+window.autosave= ()->
+  text = $("#diary_text").val()
+  if text == ""
+    return false
+  $.post '/autosave',{ text: text }, (data) ->
+
 $(document).ready ->
   diary_show = $('div.diary_show')
   $('ul.diary a').click ->
@@ -26,9 +32,3 @@ $(document).ready ->
     preview_text.hide()
     diary_text.show()
     false
-  autosave= ()->
-    text = $("#diary_text").val()
-    if text == ""
-      return false
-    $.post '/autosave',{ text: text }, (data) ->
-  setInterval(autosave, 10000)
