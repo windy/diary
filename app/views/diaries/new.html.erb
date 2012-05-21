@@ -12,6 +12,7 @@
   <%= f.input :text, :label=>false %>
   <div id="preview_text"></div>
   <%= f.submit :class=>"btn btn-primary" %>
+  <%= f.input :private, :label=>"完全秘密",:html=>"123",:wrapper_html => { :class => 'private' } %>
 <% end %>
 <%= render "common/help" %>
 <script type="text/javascript">

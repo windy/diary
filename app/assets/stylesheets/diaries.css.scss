@@ -85,3 +85,11 @@ a.help {
   background-image: url(k.png);
   background-position: 0 0;
 }
+
+.private {
+  display: inline-block;
+  margin-left: 32px;
+}
+.private * {
+  display: inline;
+}

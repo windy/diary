@@ -1,3 +1,4 @@
+# encoding : utf-8
 class DiariesController < ApplicationController
   def new
     @diary = Diary.new
@@ -7,13 +8,14 @@ class DiariesController < ApplicationController
     end
   end
 
+  # My Home Page
   def index
     @diaries = current_user.diaries.order_time
   end
 
   def user_index
     user = User.find_by_name(params[:user])
-    @diaries = user.diaries.order_time
+    @diaries = user.diaries.displayer.order_time
     render :index
   end
 
@@ -37,8 +39,12 @@ class DiariesController < ApplicationController
   end
 
   def show
-    #@diary = current_user.diaries.find(params[:id])
-    @diary = Diary.find(params[:id])
+    begin
+      @diary = Diary.displayer.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      @diary = Diary.find(params[:id])
+      raise if current_user != @diary.user
+    end
     text = @diary.text
     text = @diary.markdown_text unless params[:origin]
     render :text=>text

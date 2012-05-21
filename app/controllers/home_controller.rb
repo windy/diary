@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
-  skip_before_filter :authenticate_user!, :only=>[:about]
+  skip_before_filter :authenticate_user!, :only=>[:about, :index]
   def index
-    @diaries = Diary.order_time.all
+    @diaries = Diary.displayer.order_time.all
   end
 
   def about

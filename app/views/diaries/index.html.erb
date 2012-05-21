@@ -4,7 +4,7 @@
     <% @diaries.each do |diary| %>
       <li>
         <ul class="diary">
-          <li class="name"><i class="icon-diary"></i> <%= link_to diary.name, diary_path(diary) %> </li>
+          <li class="name"><i class=<%= diary.private ? "icon-lock" : "icon-diary" %> ></i> <%= link_to diary.name, diary_path(diary) %> </li>
           <li class="text"> <%= truncate(diary.text) %> </li>
           <li class="from"> <%= time_ago_in_words(diary.created_at)%><%=t(:from)%> </li>
         </ul>
