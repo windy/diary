@@ -53,7 +53,7 @@ class DiariesController < ApplicationController
 
   def preview
     text = params[:text]
-    render :text=> BlueCloth.new(text).to_html.gsub(">\n\n<","><")
+    render :text=> BlueCloth.new(text).to_html.gsub(/>(\n)+</,"><")
   end
 
   def edit
