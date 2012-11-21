@@ -1,5 +1,6 @@
 # encoding : utf-8
 class DiariesController < ApplicationController
+  skip_before_filter :authenticate_user!, :only=>[:show]
   def new
     @diary = Diary.new
     if current_user.saved
@@ -52,7 +53,7 @@ class DiariesController < ApplicationController
 
   def preview
     text = params[:text]
-    render :text=> BlueCloth.new(text).to_html
+    render :text=> BlueCloth.new(text).to_html.gsub(">\n\n<","><")
   end
 
   def edit

@@ -10,6 +10,6 @@ class Diary < ActiveRecord::Base
   belongs_to :user
 
   def markdown_text
-    BlueCloth.new(text).to_html
+    BlueCloth.new(text).to_html.gsub(">\n\n<","><")
   end
 end
